@@ -201,6 +201,10 @@ if ~strcmp(st_cfg.style,'blank')
   end
   
   % calculate colormap limits
+  if isfield(st_cfg,'colormap')
+      colormap(st_cfg.colormap)
+  end
+  
   m = size(colormap,1);
   if ischar(st_cfg.maplimits)
     if strcmp(st_cfg.maplimits,'absmax')

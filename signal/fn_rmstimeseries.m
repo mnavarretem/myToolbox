@@ -19,12 +19,11 @@ vt_signal	= vertcat(...
             flipud(vt_signal(1:nm_window)),vt_signal,...
             flipud(vt_signal(end-nm_window+1:end)));
         
-vt_signal   = vt_signal .* conj(vt_signal);
-
+vt_signal	= vt_signal .* conj(vt_signal);
 vt_signal   = filter(ones(1,nm_window),1,vt_signal)./nm_window;
-
 vt_rms      = zeros(size(vt_signal));
 
 vt_rms(1:end-ceil(nm_window/2)+1)	= sqrt(vt_signal(ceil(nm_window / 2):end));
 
 vt_rms      = vt_rms(vt_cutId(1):vt_cutId(end));
+

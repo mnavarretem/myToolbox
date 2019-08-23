@@ -194,7 +194,7 @@ end
 % Determine spindle rms energy
 if isempty(st_Cnf.rms)
     nm_windowRMS	= round(nm_fSample * st_Cnf.window);
-    st_Cnf.rms          = fn_rmstimeseries(vt_eeg,nm_windowRMS);    
+    st_Cnf.rms      = fn_rmstimeseries(vt_eeg,nm_windowRMS);    
 end
 
 switch st_Cnf.method

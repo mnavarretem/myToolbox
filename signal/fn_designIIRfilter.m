@@ -24,7 +24,7 @@ end
 
 if nargin < 4 
     nm_aPass = 1;
-    nm_aStop = 50;
+    nm_aStop = 100;
 else
     if isempty(vt_gainVals) || numel(vt_gainVals) ~=2
         error('[f_DesignIIRfilter] - ERROR: bad vt_gainVals parameters!')
